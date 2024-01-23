@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.dependencies]
+amicis_core = { path = "./crates/amicis_core" }
+axum = "0.7.4"
+rand = "0.8.5"
+serde = "1.0.195"
+serde_json = "1.0.111"
+thiserror = "1.0.56"
+tokio = "1.35.1"
+leptos = "0.5.7"
