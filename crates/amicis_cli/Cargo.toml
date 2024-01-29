@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 amicis_core.workspace = true
+clap = { workspace = true, features = ["derive"] }

@@ -1,6 +1,6 @@
 use thiserror::Error;
 
-use crate::greet;
+use crate::Greetable;
 
 #[derive(Debug, Error)]
 pub enum Error {
@@ -29,7 +29,7 @@ pub struct FooServer;
 
 impl Server for FooServer {
     async fn greet(&self, request: GreetRequest) -> Result<GreetResponse> {
-        let greeting = greet(request.name);
+        let greeting = request.name.greet();
 
         Ok(GreetResponse { greeting })
     }
