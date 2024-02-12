@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 amicis_core.workspace = true
+json_api.workspace = true
 axum = { workspace = true }
 leptos = { workspace = true, features = ["ssr"] }
 rand.workspace = true
@@ -14,3 +15,4 @@ serde = { workspace = true, features = ["derive"] }
 serde_json.workspace = true
 thiserror.workspace = true
 tokio = { workspace = true, features = ["full"] }
+uuid = { version = "1.7.0", features = ["fast-rng", "serde", "v4"] }

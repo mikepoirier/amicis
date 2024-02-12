@@ -7,7 +7,6 @@ mod error;
 mod routes;
 
 pub struct WebServer {
-    port: u16,
     listener: TcpListener,
     routes: Router,
 }
@@ -20,11 +19,7 @@ impl WebServer {
 
         let listener = TcpListener::bind(("0.0.0.0", port)).await.unwrap();
 
-        Self {
-            port,
-            listener,
-            routes,
-        }
+        Self { listener, routes }
     }
 
     pub async fn run(self) {

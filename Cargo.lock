@@ -32,6 +32,7 @@ version = "0.1.0"
 dependencies = [
  "amicis_core",
  "clap",
+ "json_api",
 ]
 
 [[package]]
@@ -47,12 +48,14 @@ version = "0.1.0"
 dependencies = [
  "amicis_core",
  "axum",
+ "json_api",
  "leptos",
  "rand",
  "serde",
  "serde_json",
  "thiserror",
  "tokio",
+ "uuid",
 ]
 
 [[package]]
@@ -872,6 +875,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a1d36f1235bc969acba30b7f5990b864423a6068a10f7c90ae8f0112e3a59d1"
 dependencies = [
  "wasm-bindgen",
+]
+
+[[package]]
+name = "json_api"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "serde_json",
+ "thiserror",
 ]
 
 [[package]]
@@ -1954,6 +1966,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f00cc9702ca12d3c81455259621e676d0f7251cec66a21e98fe2e9a37db93b2a"
 dependencies = [
  "getrandom",
+ "rand",
+ "serde",
 ]
 
 [[package]]

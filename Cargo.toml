@@ -4,6 +4,7 @@ members = ["crates/*"]
 
 [workspace.dependencies]
 amicis_core = { path = "./crates/amicis_core" }
+json_api = { path = "./crates/json_api" }
 axum = "0.7.4"
 clap = "4.4.18"
 dirs = "5.0.1"
