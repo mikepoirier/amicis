@@ -1,0 +1,16 @@
+[package]
+name = "json_api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+serde_json.workspace = true
+thiserror.workspace = true
+
+[features]
+default = ["v1", "v2_prototype"]
+v1 = []
+v2_prototype = []

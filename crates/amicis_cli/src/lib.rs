@@ -4,11 +4,8 @@ use args::{Command, HelloArgs};
 pub mod args;
 
 pub fn run(args: HelloArgs) {
-    match args.command {
-        Some(Command::Greet { name }) => {
-            let greeting = name.greet();
-            println!("{greeting}");
-        }
-        _ => {}
+    if let Some(Command::Greet { name }) = args.command {
+        let greeting = name.greet();
+        println!("{greeting}");
     }
 }

@@ -1,12 +1,13 @@
 use std::collections::HashMap;
 use std::fmt::{Display, Formatter, Result};
 
-use serde::{Serialize};
+use serde::Serialize;
 
 pub mod api;
 pub mod ui;
 
 #[derive(Debug, Serialize)]
+#[allow(unused)]
 enum HealthStatus {
     Up,
     Down,
@@ -47,7 +48,7 @@ async fn health_status() -> HealthStatus {
 #[derive(Debug, Serialize)]
 struct Document {
     data: Resource,
-    included: Option<Vec<Resource>>
+    included: Option<Vec<Resource>>,
 }
 
 #[derive(Debug, Serialize)]
