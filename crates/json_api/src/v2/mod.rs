@@ -57,7 +57,6 @@ impl DocumentBuilder<Resource> {
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct Document {
-    // TODO: This may need to be refined back to a Resource
     data: Resource,
     #[serde(skip_serializing_if = "Option::is_none")]
     includes: Option<Vec<Resource>>,
@@ -304,21 +303,6 @@ impl RelationshipObject {
         RelationshipObjectBuilder::new()
     }
 }
-
-// impl<T> From<Vec<T>> for RelationshipObject
-// where
-//     T: Into<RelationshipObject>,
-// {
-//     fn from(value: Vec<T>) -> Self {
-//         todo!()
-//     }
-// }
-
-// impl<T: Into<RelationshipObject>> Into<RelationshipObject> for Vec<T> {
-//     fn into(self) -> RelationshipObject {
-//         todo!()
-//     }
-// }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct ProblemDetails {
